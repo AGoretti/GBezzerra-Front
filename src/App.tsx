@@ -1,5 +1,4 @@
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './App.css'
 import Logo from './assets/logo.png'
 import Nome from './assets/nome.png'
@@ -21,18 +20,33 @@ function App() {
           <a className='Rede'><img src={Twitter} alt='' className='Face'/></a>
         </div>
       </div>
-      <Carousel showStatus={false} showIndicators={false} showThumbs={false}>
+      <Carousel showStatus={false}  showThumbs={false} className='Carrousel'>
         <div>
-            <img src={Base} />
-            <p className="legend">Legend 1</p>
+            <img src={Base} className='CarrouselImage'/>
+            <p className="legend">Áreas de Atuação: <br/>
+              - Direito Civil e seus ramos: <br/>
+              - Direito de Sucessão <br/> 
+              - Direito de Família <br/>
+              - Direito Imobiliário <br/>
+              - Direito do Consumidor</p>
         </div>
         <div>
-            <img src={Base} />
-            <p className="legend">Legend 2</p>
+            <img src={Base} className='CarrouselImage'/>
+            <p className="legend">Áreas de Atuação: <br/>
+              - Direito Civil e seus ramos: <br/>
+              - Direito de Sucessão <br/> 
+              - Direito de Família <br/>
+              - Direito Imobiliário <br/>
+              - Direito do Consumidor</p>
         </div>
         <div>
-            <img src={Base} />
-            <p className="legend">Legend 3</p>
+            <img src={Base} className='CarrouselImage'/>
+            <p className="legend">Áreas de Atuação: <br/>
+              - Direito Civil e seus ramos: <br/>
+              - Direito de Sucessão <br/> 
+              - Direito de Família <br/>
+              - Direito Imobiliário <br/>
+              - Direito do Consumidor</p>
         </div>
       </Carousel>
     </div>
