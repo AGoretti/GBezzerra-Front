@@ -6,12 +6,14 @@ import Face from './assets/face.png'
 import Insta from './assets/insta.png'
 import Twitter from './assets/twitter.png'
 import Base from './assets/image_base.png'
+import Perfil from './assets/perfil.png'
 
 function App() {
   
   return (
     <div className="App">
       <div className='Header' >
+        <div className='FotoPerfil' ></div>
         <img className='Logo' src={Logo} alt ='' />
         <img className='Nome' src={Nome} alt='' />
         <div className='Redes'>
@@ -48,6 +50,7 @@ function App() {
               - Direito Imobiliário <br/>
               - Direito do Consumidor</p>
         </div>
+        
       </Carousel>
     </div>
   )
