@@ -35,7 +35,7 @@ function App() {
           <a className='Rede' href='https://twitter.com/escritorioCBadv' target="_blank"><img src={Twitter} alt='' className='Face'/></a>
         </div>
       </div>
-      <Carousel showStatus={false}  showThumbs={false} className='Carrousel'>
+      <Carousel showStatus={false}  showThumbs={false} className='Carrousel' autoPlay={true} infiniteLoop={true} interval={5000} stopOnHover={false}>
         <div>
             <img src={img1} className='CarrouselImage'/>
             <p className="legend">Áreas de Atuação: <br/>
@@ -103,6 +103,17 @@ function App() {
               </a>
             </Carrousel.Item>
       </Carrousel>
+        </div>
+      </div>
+      <div className='footer' >
+        <div>
+          EmailContato@123.com <br />
+          EmailContato2@123.com
+        </div>
+        <div className='linhaFooter' />
+        <div>
+          EmailContato@123.com <br />
+          EmailContato2@123.com
         </div>
       </div>
     
