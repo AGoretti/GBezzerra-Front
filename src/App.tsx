@@ -8,16 +8,17 @@ import Face from './assets/face.png'
 import Insta from './assets/insta.png'
 import Twitter from './assets/twitter.png'
 import Base from './assets/image_base.png'
-import img1 from './assets/congresso-nacional-em-brasilia.jpg'
-import img2 from './assets/entenda-o-funcionamento-dos-trc3aas-poderes-e-do-stf.webp'
-import img3 from './assets/Praça_dos_três_poderes_(5944395105)_(3).jpg'
+import img1 from './assets/ponte JK1920x1280.jpg'
+import img2 from './assets/catedral1920x1280.jpg'
+import img3 from './assets/biblioteca 1920x1280.jpg'
+import img4 from './assets/STF 1920x1280.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Wwp from './assets/wwpWhite.png'
 
 function App() {
 
   const [pub1, setPub1] = useState(false)
   const [wwp, setWwp] = useState(false)
+  const [mensagem, setMensagem] = useState('')
 
   function handlePub1 () {
     setPub1(!pub1)
@@ -54,7 +55,10 @@ function App() {
             <img src={img3} className='CarrouselImage'/>
             
         </div>
-        
+        <div>
+            <img src={img4} className='CarrouselImage'/>
+            
+        </div>
       </Carousel>
       <p className="legenda">Áreas de Atuação: <br/>
               - Direito Civil e seus ramos: <br/>
@@ -125,11 +129,11 @@ function App() {
       </div>
 
       <div id={wwp ? 'chat-box': 'chat-box-closed'}>
-        <div id='chat-top'>Need HELP? <span id='chat-top-right'><svg id='close-box' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill='#fff'/></svg></span><div className='clear'></div></div>
+        <div id='chat-top'>Whatsapp <span id='chat-top-right'><svg id='close-box' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill='#fff'/></svg></span><div className='clear'></div></div>
         <div id='chat-msg'><p>We Are expert in Web Design and Technical SEO</p>
         <div id='chat-form'>
         <div className='chat-in'>
-        <input type='text' id='whats-in' placeholder='Send Your Message...'/></div><div id='send-btn'><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"><path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z" fill='rgb(18, 140, 126)'/></svg></div></div>
+        <input onChange={e => setMensagem(e.target.value)} type='text' id='whats-in' placeholder='Mande sua mensagem...' /></div><a target="_blank" href={'https://api.whatsapp.com/send?phone=55555555&text=' + mensagem} id='send-btn'><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"><path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z" fill='rgb(18, 140, 126)' /></svg></a></div>
         </div>
       </div>
       <div id='whats-chat'>
