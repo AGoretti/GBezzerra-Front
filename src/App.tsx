@@ -36,6 +36,13 @@ function App() {
     <div className="App">
     <img src={Barra1} className='Barra1'/>
     <img src={Barra2} className='Barra2'/>
+    <div className='Areas'>
+          <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
+          <li>Direitos de Sucessão</li>
+          <li>Direito de Família</li>
+          <li>Direito Imobiliário</li>
+          <li>Direito do Consumidor</li>
+    </div>
       <div className='Header' >
         <div className='FotoPerfil' ></div>
         <img className='Logo' src={Logo} alt ='' />
