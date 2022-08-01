@@ -13,7 +13,7 @@
   align-items: center;
   min-height: 80px;
   position: relative;
-
+  z-index: 4;
 }
 
 .Logo{
@@ -47,8 +47,8 @@
   padding-top: 10%;
   width: 10%;
   max-height: 5px;
-  left: 85%;
-  top: 100%;
+  left: 89%;
+  top: 64%;
   margin: 3em auto;
   position: absolute;
   border-radius: 15vw;
@@ -56,12 +56,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  z-index: 1;
+  z-index: 5;
   overflow: hidden;
 }
 
 .CarrouselImage{
   max-height: 700px;
+  min-height: 700px;
   object-fit: cover;
 }
 
@@ -71,6 +72,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 50;
 }
 
 .card {
@@ -138,7 +140,7 @@
   bottom: 0;
   top: 0;
   background-color: rgba(0,0,0,0.6);
-  z-index: 2;
+  z-index: 5;
 }
 
 .window-open {
@@ -150,7 +152,7 @@
   top: 20%;
   background-color: white;
   border: solid 2px gray;
-  z-index: 3;
+  z-index: 6;
 }
 
 .footer{
@@ -181,13 +183,20 @@
   left: 50%;
   top: 0;
   border-radius: 20px;
-  margin-right: 0.5%;
+ 
 
 }
 
 .contatos{
   font-family: 'Libre Baskerville', serif;
   width: 20%;
+  padding-right: 3%;
+}
+
+.contatos1{
+  font-family: 'Libre Baskerville', serif;
+  width: 20%;
+  padding-left: 3%;
 }
 
 .cardText{
@@ -231,6 +240,60 @@
   text-align: left;
   font-family: 'Libre Baskerville', serif;
 
+}
+
+.Barras{
+  position: absolute;
+  z-index: 4;
+  background: url('./assets/barras_douradas_3.png');
+  width: 100%;
+  min-height: 701px;
+  max-height: 701px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-y: center;
+  top: 9.9%;
+  right: 0%;
+}
+
+.Barra1{
+  position: absolute;
+  z-index: 3;
+  top: 9.9%;
+  right: 35%;
+  width: 65%;
+  min-height: 700px;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.Barra2{
+  position: absolute;
+  z-index: 3;
+  top: 9%;
+  right: 0%;
+  width: 80%;
+  min-height: 700px;
+  max-height: 700px;
+}
+
+.Areas{
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  right: 35%;
+  width: 65%;
+  overflow: hidden;
+  color: #e7b157;
+  text-align: left;
+  font-size: 0.9vw;
+  line-height: 40px;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.Areas h5 {
+  font-size: 1vw;
 }
 
 .carousel .control-arrow,.carousel.carousel-slider .control-arrow{-webkit-transition:all .25s ease-in;-moz-transition:all .25s ease-in;-ms-transition:all .25s ease-in;-o-transition:all .25s ease-in;transition:all .25s ease-in;opacity:.4;filter:alpha(opacity=40);position:absolute;z-index:2;top:20px;background:none;border:0;font-size:32px;cursor:pointer}
@@ -278,11 +341,11 @@ body{width:100%}
 #whats-chat{position:fixed;right:2%;bottom:4%;height:auto;width:auto;background:#25D366;padding:12.5px;border-radius:50px;}
 #whats-chat:hover{cursor:pointer;box-shadow:2px 2px 15px #ccc;bottom:6%;}
 /*===============================*/
-#chat-box{position:fixed;right:75px;bottom:8%;width:250px;height:200px;transition:all .5s;z-index: 10;}
+#chat-box{position:fixed;right:75px;bottom:30%;width:250px;height:200px;transition:all .5s;z-index: 10;}
 #chat-box-closed{position:fixed;right:100px;bottom:10%;width:250px;height:200px;transition:all .5s;z-index: 10;display: none;}
 #chat-top{width:100%;line-height:2;background:rgb(18, 140, 126);color:white;text-align:center;border-radius:5px 5px 0 0;padding:0 10px;}
 #chat-msg{background:#ece5dd;padding:10px;border-radius:0 0 5px 5px;box-shadow:0 0 25px -10px #999;}
-#chat-msg p{font-size:14px;padding:5px;background:white;border-radius:0 50px 50px 50px;margin-bottom:10px;}
+#chat-msg p{font-size:14px;padding:10px;background:white;border-radius:0 50px 50px 50px;margin-bottom:10px;}
 #chat-form{display:flex;}
 .chat-in{width:80%;}
 #chat-form input{border-radius:5px 0 5px 5px;border:none;outline:none;font-size:14px;padding:5px;line-height:2;}
@@ -290,7 +353,7 @@ body{width:100%}
 #chat-top-right{float:right;padding:5px 0;}
 #chat-box:after{content:'';
     position: absolute;
-    top:58%;
+    top:150%;
     left: 90%;
     width: 0;
     height: 0;

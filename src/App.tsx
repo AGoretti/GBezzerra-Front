@@ -12,6 +12,8 @@ import img1 from './assets/ponte JK1920x1280.jpg'
 import img2 from './assets/catedral1920x1280.jpg'
 import img3 from './assets/biblioteca 1920x1280.jpg'
 import img4 from './assets/STF 1920x1280.jpg'
+import Barra1 from './assets/canto inferior sem texto.png'
+import Barra2 from './assets/canto superior.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -32,6 +34,15 @@ function App() {
   
   return (
     <div className="App">
+    <img src={Barra1} className='Barra1'/>
+    <img src={Barra2} className='Barra2'/>
+    <div className='Areas'>
+          <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
+          <li>Direitos de Sucessão</li>
+          <li>Direito de Família</li>
+          <li>Direito Imobiliário</li>
+          <li>Direito do Consumidor</li>
+    </div>
       <div className='Header' >
         <div className='FotoPerfil' ></div>
         <img className='Logo' src={Logo} alt ='' />
@@ -60,12 +71,7 @@ function App() {
             
         </div>
       </Carousel>
-      <p className="legenda">Áreas de Atuação: <br/>
-              - Direito Civil e seus ramos: <br/>
-              - Direito de Sucessão <br/> 
-              - Direito de Família <br/>
-              - Direito Imobiliário <br/>
-              - Direito do Consumidor</p>
+     
       <div className='Cards'>
         <div className='card'>
           <Carrousel variant="dark" indicators={false} >
@@ -75,33 +81,33 @@ function App() {
               </p>
             </Carrousel.Item>
             <Carrousel.Item>
-              <a>
-                asdasdasd 2
-              </a>
+              <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
             <Carrousel.Item>
-              <a>
-                asdasdasd 3
-              </a>
+             <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
           </Carrousel>
         </div>
         <div className='card' >
           <Carrousel variant="dark"indicators={false} fade>
             <Carrousel.Item>
-              <a>
-                asdasdasd 1
-              </a>
+              <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
             <Carrousel.Item>
-              <a>
-                asdasdasd 2
-              </a>
+              <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
             <Carrousel.Item>
-              <a>
-                asdasdasd 3
-              </a>
+              <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
       </Carrousel>
         </div>
@@ -109,11 +115,11 @@ function App() {
       <div className='footer' >
         <div className='contatos'>
           +55 (61) 9.9640-5998. <br />
-          Asa Sul - Brasília/DF
+          Setor Comercial Sul, <br />Quadra 01, Edifício JK,<br /> Conjunto 122, CEP 70306-900, Brasília-DF
         </div>
         <div className='linhaFooter' />
         <div className='linhaFooter1' />
-        <div className='contatos'>
+        <div className='contatos1'>
           cabralbezerra@adv.br <br />
           escritorio@cabralbezerra.com
         </div>
@@ -130,7 +136,10 @@ function App() {
 
       <div id={wwp ? 'chat-box': 'chat-box-closed'}>
         <div id='chat-top'>Whatsapp <span id='chat-top-right'><svg id='close-box' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill='#fff'/></svg></span><div className='clear'></div></div>
-        <div id='chat-msg'><p>We Are expert in Web Design and Technical SEO</p>
+        <div id='chat-msg'> 
+                            <p>Olá, tudo bem? </p>
+                            <p>Este é o canal de atendimento do escritório de advocacia Cabral Bezerra Advogados Associados.  </p>
+                            <p>Por favor, informe-nos como podemos ajudar-lhe?</p>
         <div id='chat-form'>
         <div className='chat-in'>
         <input onChange={e => setMensagem(e.target.value)} type='text' id='whats-in' placeholder='Mande sua mensagem...' /></div><a target="_blank" href={'https://api.whatsapp.com/send?phone=55555555&text=' + mensagem} id='send-btn'><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"><path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z" fill='rgb(18, 140, 126)' /></svg></a></div>
