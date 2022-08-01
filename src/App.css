@@ -13,7 +13,7 @@
   align-items: center;
   min-height: 80px;
   position: relative;
-
+  z-index: 4;
 }
 
 .Logo{
@@ -47,8 +47,8 @@
   padding-top: 10%;
   width: 10%;
   max-height: 5px;
-  left: 85%;
-  top: 100%;
+  left: 89%;
+  top: 64%;
   margin: 3em auto;
   position: absolute;
   border-radius: 15vw;
@@ -56,12 +56,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  z-index: 1;
+  z-index: 5;
   overflow: hidden;
 }
 
 .CarrouselImage{
   max-height: 700px;
+  min-height: 700px;
   object-fit: cover;
 }
 
@@ -71,6 +72,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 50;
 }
 
 .card {
@@ -138,7 +140,7 @@
   bottom: 0;
   top: 0;
   background-color: rgba(0,0,0,0.6);
-  z-index: 2;
+  z-index: 5;
 }
 
 .window-open {
@@ -150,7 +152,7 @@
   top: 20%;
   background-color: white;
   border: solid 2px gray;
-  z-index: 3;
+  z-index: 6;
 }
 
 .footer{
@@ -181,13 +183,20 @@
   left: 50%;
   top: 0;
   border-radius: 20px;
-  margin-right: 0.5%;
+ 
 
 }
 
 .contatos{
   font-family: 'Libre Baskerville', serif;
   width: 20%;
+  padding-right: 3%;
+}
+
+.contatos1{
+  font-family: 'Libre Baskerville', serif;
+  width: 20%;
+  padding-left: 3%;
 }
 
 .cardText{
@@ -231,6 +240,41 @@
   text-align: left;
   font-family: 'Libre Baskerville', serif;
 
+}
+
+.Barras{
+  position: absolute;
+  z-index: 4;
+  background: url('./assets/barras_douradas_3.png');
+  width: 100%;
+  min-height: 701px;
+  max-height: 701px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-y: center;
+  top: 9.9%;
+  right: 0%;
+}
+
+.Barra1{
+  position: absolute;
+  z-index: 3;
+  top: 9.9%;
+  right: 35%;
+  width: 65%;
+  min-height: 700px;
+  max-height: 700px;
+  overflow: hidden;
+}
+
+.Barra2{
+  position: absolute;
+  z-index: 3;
+  top: 9%;
+  right: 0%;
+  width: 80%;
+  min-height: 700px;
+  max-height: 700px;
 }
 
 .carousel .control-arrow,.carousel.carousel-slider .control-arrow{-webkit-transition:all .25s ease-in;-moz-transition:all .25s ease-in;-ms-transition:all .25s ease-in;-o-transition:all .25s ease-in;transition:all .25s ease-in;opacity:.4;filter:alpha(opacity=40);position:absolute;z-index:2;top:20px;background:none;border:0;font-size:32px;cursor:pointer}

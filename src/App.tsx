@@ -12,6 +12,8 @@ import img1 from './assets/ponte JK1920x1280.jpg'
 import img2 from './assets/catedral1920x1280.jpg'
 import img3 from './assets/biblioteca 1920x1280.jpg'
 import img4 from './assets/STF 1920x1280.jpg'
+import Barra1 from './assets/canto inferior sem texto.png'
+import Barra2 from './assets/canto superior.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
   
   return (
     <div className="App">
+    <img src={Barra1} className='Barra1'/>
+    <img src={Barra2} className='Barra2'/>
       <div className='Header' >
         <div className='FotoPerfil' ></div>
         <img className='Logo' src={Logo} alt ='' />
@@ -60,12 +64,7 @@ function App() {
             
         </div>
       </Carousel>
-      <p className="legenda">Áreas de Atuação: <br/>
-              - Direito Civil e seus ramos: <br/>
-              - Direito de Sucessão <br/> 
-              - Direito de Família <br/>
-              - Direito Imobiliário <br/>
-              - Direito do Consumidor</p>
+     
       <div className='Cards'>
         <div className='card'>
           <Carrousel variant="dark" indicators={false} >
@@ -75,33 +74,33 @@ function App() {
               </p>
             </Carrousel.Item>
             <Carrousel.Item>
-              <a>
-                asdasdasd 2
-              </a>
+              <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
             <Carrousel.Item>
-              <a>
-                asdasdasd 3
-              </a>
+             <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
           </Carrousel>
         </div>
         <div className='card' >
           <Carrousel variant="dark"indicators={false} fade>
             <Carrousel.Item>
-              <a>
-                asdasdasd 1
-              </a>
+              <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
             <Carrousel.Item>
-              <a>
-                asdasdasd 2
-              </a>
+              <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
             <Carrousel.Item>
-              <a>
-                asdasdasd 3
-              </a>
+              <p className='cardText'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              </p>
             </Carrousel.Item>
       </Carrousel>
         </div>
@@ -109,11 +108,11 @@ function App() {
       <div className='footer' >
         <div className='contatos'>
           +55 (61) 9.9640-5998. <br />
-          Asa Sul - Brasília/DF
+          Setor Comercial Sul, <br />Quadra 01, Edifício JK,<br /> Conjunto 122, CEP 70306-900, Brasília-DF
         </div>
         <div className='linhaFooter' />
         <div className='linhaFooter1' />
-        <div className='contatos'>
+        <div className='contatos1'>
           cabralbezerra@adv.br <br />
           escritorio@cabralbezerra.com
         </div>
