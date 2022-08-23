@@ -40,20 +40,22 @@ function App() {
   
   return (
     <div className="App">
-    <img src={Barra1} className='Barra1'/>
-    <img src={Barra2} className='Barra2'/>
-    <div className='Areas'>
-          <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
-          <li>Direitos de Sucessão</li>
-          <li>Direito de Família</li>
-          <li>Direito Imobiliário</li>
-          <li>Direito do Consumidor</li>
-    </div>
+      <img src={Barra1} className='Barra1'/>
+      <img src={Barra2} className='Barra2'/>
+      
       <div className='Header' >
         <div className='FotoPerfil' ></div>
         <img className='Logo' src={Logo} alt ='' />
         <img className='Nome' src={Nome} alt='' />
         <img className='Logo1' src={Logo} alt ='' />
+      </div>
+      <img className='FotoPerfilM' src='src/assets/LogoGabrielFundoEscuro2.png'></img>
+      <div className='Areas'>
+            <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
+            <li>Direitos de Sucessão</li>
+            <li>Direito de Família</li>
+            <li>Direito Imobiliário</li>
+            <li>Direito do Consumidor</li>
       </div>
       <Carousel showStatus={false}  showThumbs={false} className='Carrousel' autoPlay={true} infiniteLoop={true} interval={5000} stopOnHover={false}>
         <div>
@@ -149,7 +151,7 @@ function App() {
                             <p>Por favor, informe-nos como podemos ajudar-lhe?</p>
         <div id='chat-form'>
         <div className='chat-in'>
-        <input onChange={e => setMensagem(e.target.value)} type='text' id='whats-in' placeholder='Mande sua mensagem...' /></div><a target="_blank" href={'https://api.whatsapp.com/send?phone=55555555&text=' + mensagem} id='send-btn'><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"><path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z" fill='rgb(18, 140, 126)' /></svg></a></div>
+        <input onChange={e => setMensagem(e.target.value)} type='text' id='whats-in' placeholder='Mande sua mensagem...' /></div><a target="_blank" href={'https://api.whatsapp.com/send?phone=5561996405998&text=' + mensagem} id='send-btn'><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"><path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z" fill='rgb(18, 140, 126)' /></svg></a></div>
         </div>
       </div>
       <div id='whats-chat'>
