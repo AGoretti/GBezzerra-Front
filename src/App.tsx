@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import { useScrollPosition } from './hooks/useScrollPosition';
 import Carrousel from 'react-bootstrap/Carousel'
 import './App.css'
 import Logo from './assets/logo.png'
@@ -22,6 +23,7 @@ function App() {
   const [wwp, setWwp] = useState(false)
   const [mensagem, setMensagem] = useState('')
 
+
   function handlePub1 () {
     setPub1(!pub1)
     console.log(pub1)
@@ -31,27 +33,29 @@ function App() {
     setWwp(!wwp)
     console.log(wwp)
   }
+
+  const scrollPosition = useScrollPosition()
+
+  console.log(scrollPosition)
   
   return (
     <div className="App">
-    <img src={Barra1} className='Barra1'/>
-    <img src={Barra2} className='Barra2'/>
-    <div className='Areas'>
-          <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
-          <li>Direitos de Sucessão</li>
-          <li>Direito de Família</li>
-          <li>Direito Imobiliário</li>
-          <li>Direito do Consumidor</li>
-    </div>
+      <img src={Barra1} className='Barra1'/>
+      <img src={Barra2} className='Barra2'/>
+      
       <div className='Header' >
         <div className='FotoPerfil' ></div>
         <img className='Logo' src={Logo} alt ='' />
         <img className='Nome' src={Nome} alt='' />
-        <div className='Redes'>
-          <a className='Rede' href='https://web.facebook.com/cabralbezerraadv' target="_blank"><img src={Face} alt='' className='Face'/></a>
-          <a className='Rede' href='https://instagram.com/escritoriocabralbezerra?igshid=YmMyMTA2M2Y=' target="_blank"><img src={Insta} alt='' className='Face'/></a>
-          <a className='Rede' href='https://twitter.com/escritorioCBadv' target="_blank"><img src={Twitter} alt='' className='Face'/></a>
-        </div>
+        <img className='Logo1' src={Logo} alt ='' />
+      </div>
+      <img className='FotoPerfilM' src='src/assets/LogoGabrielFundoEscuro2.png'></img>
+      <div className='Areas'>
+            <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
+            <li>Direitos de Sucessão</li>
+            <li>Direito de Família</li>
+            <li>Direito Imobiliário</li>
+            <li>Direito do Consumidor</li>
       </div>
       <Carousel showStatus={false}  showThumbs={false} className='Carrousel' autoPlay={true} infiniteLoop={true} interval={5000} stopOnHover={false}>
         <div>
@@ -113,14 +117,19 @@ function App() {
         </div>
       </div>
       <div className='footer' >
+        <div className='Redes'>
+          <a className='Rede' href='https://web.facebook.com/cabralbezerraadv' target="_blank"><img src={Face} alt='' className='Face'/></a>
+          <a className='Rede' href='https://instagram.com/escritoriocabralbezerra?igshid=YmMyMTA2M2Y=' target="_blank"><img src={Insta} alt='' className='Face'/></a>
+          <a className='Rede' href='https://twitter.com/escritorioCBadv' target="_blank"><img src={Twitter} alt='' className='Face'/></a>
+        </div>
         <div className='contatos'>
-          +55 (61) 9.9640-5998. <br />
+          
           Setor Comercial Sul, <br />Quadra 01, Edifício JK,<br /> Conjunto 122, CEP 70306-900, Brasília-DF
         </div>
         <div className='linhaFooter' />
         <div className='linhaFooter1' />
         <div className='contatos1'>
-          cabralbezerra@adv.br <br />
+          +55 (61) 9.9640-5998. <br />
           escritorio@cabralbezerra.com
         </div>
       </div>
@@ -134,7 +143,7 @@ function App() {
         </p>
       </div>
 
-      <div id={wwp ? 'chat-box': 'chat-box-closed'}>
+      <div id={(scrollPosition > 180 || wwp) ? 'chat-box': 'chat-box-closed'}>
         <div id='chat-top'>Whatsapp <span id='chat-top-right'><svg id='close-box' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill='#fff'/></svg></span><div className='clear'></div></div>
         <div id='chat-msg'> 
                             <p>Olá, tudo bem? </p>
@@ -142,7 +151,7 @@ function App() {
                             <p>Por favor, informe-nos como podemos ajudar-lhe?</p>
         <div id='chat-form'>
         <div className='chat-in'>
-        <input onChange={e => setMensagem(e.target.value)} type='text' id='whats-in' placeholder='Mande sua mensagem...' /></div><a target="_blank" href={'https://api.whatsapp.com/send?phone=55555555&text=' + mensagem} id='send-btn'><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"><path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z" fill='rgb(18, 140, 126)' /></svg></a></div>
+        <input onChange={e => setMensagem(e.target.value)} type='text' id='whats-in' placeholder='Mande sua mensagem...' /></div><a target="_blank" href={'https://api.whatsapp.com/send?phone=5561996405998&text=' + mensagem} id='send-btn'><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"><path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z" fill='rgb(18, 140, 126)' /></svg></a></div>
         </div>
       </div>
       <div id='whats-chat'>
