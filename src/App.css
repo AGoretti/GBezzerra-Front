@@ -376,7 +376,7 @@ body{width:100%}
 .clear{clear:both}
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 900px) {
   .App{
     background-color: #333333;
   }
@@ -403,7 +403,7 @@ body{width:100%}
     width: 80%;
     margin: 3em auto;
     border-radius: 55vw;
-    background: url('./assets/perfil.png');
+    background: none;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -430,7 +430,7 @@ body{width:100%}
     width: auto;
     line-height: normal;
     font-size: large;
-    margin-left: 25%;
+    margin-left: 22%;
     margin-bottom: 5%;
   }
 
@@ -455,10 +455,13 @@ body{width:100%}
 
   .footer{
     flex-direction: column-reverse;
+    justify-content: center;
   }
 
   .contatos1 {
     width: 100%;
+    justify-content: center;
+    padding: 0;
   }
 
   .linhaFooter{
@@ -473,6 +476,11 @@ body{width:100%}
     width: 100%;
     margin-left: 0;
     margin-bottom: 5%;
+    justify-content: center;
+  }
+
+  .Redes{
+    margin-left: 0;
   }
 
 }

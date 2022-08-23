@@ -49,7 +49,7 @@ function App() {
         <img className='Nome' src={Nome} alt='' />
         <img className='Logo1' src={Logo} alt ='' />
       </div>
-      <img className='FotoPerfilM' src='src/assets/LogoGabrielFundoEscuro2.png'></img>
+      <img className='FotoPerfilM' src='src/assets/LogoGabrielFundoEscuro2.jpg'></img>
       <div className='Areas'>
             <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
             <li>Direitos de Sucessão</li>
@@ -124,7 +124,7 @@ function App() {
         </div>
         <div className='contatos'>
           
-          Setor Comercial Sul, <br />Quadra 01, Edifício JK,<br /> Conjunto 122, CEP 70306-900, Brasília-DF
+          Setor Comercial Sul, <br />Quadra 01, Edifício JK,<br /> Conjunto 122, CEP 70306-900, <br /> Brasília-DF
         </div>
         <div className='linhaFooter' />
         <div className='linhaFooter1' />
@@ -143,7 +143,7 @@ function App() {
         </p>
       </div>
 
-      <div id={(scrollPosition > 180 || wwp) ? 'chat-box': 'chat-box-closed'}>
+      <div id={((scrollPosition > 180 && window.innerWidth > 900) || wwp) ? 'chat-box': 'chat-box-closed'}>
         <div id='chat-top'>Whatsapp <span id='chat-top-right'><svg id='close-box' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill='#fff'/></svg></span><div className='clear'></div></div>
         <div id='chat-msg'> 
                             <p>Olá, tudo bem? </p>
