@@ -15,6 +15,7 @@ import img3 from './assets/biblioteca 1920x1280.jpg'
 import img4 from './assets/STF 1920x1280.jpg'
 import Barra1 from './assets/canto inferior sem texto.png'
 import Barra2 from './assets/canto superior.png'
+import logoEmpresa from './assets/LogoGabrielFundoEscuro2.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -65,7 +66,7 @@ function App() {
         <img src={Barra2} className='Barra2'/>
       </div>
       <div className='Mobile' >
-        <img className='FotoPerfilM' src='src/assets/LogoGabrielFundoEscuro2.jpg'></img>
+        <img className='FotoPerfilM' src={logoEmpresa}></img>
         <div className='AreasMobile'>
               <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
               <li>Direitos de Sucessão</li>
