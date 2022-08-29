@@ -265,8 +265,8 @@
 
 .Barra1{
   position: absolute;
-  z-index: 3;
-  top: 9.9%;
+  z-index: 2;
+  top: 100%;
   right: 35%;
   width: 65%;
   min-height: 700px;
@@ -277,7 +277,7 @@
 .Barra2{
   position: absolute;
   z-index: 3;
-  top: 9%;
+  top: 100%;
   right: 0%;
   width: 80%;
   min-height: 700px;
@@ -287,7 +287,7 @@
 .Areas{
   position: absolute;
   z-index: 3;
-  top: 60%;
+  top: 600%;
   right: 35%;
   width: 65%;
   overflow: hidden;
@@ -295,7 +295,6 @@
   text-align: left;
   font-size: 0.9vw;
   line-height: 40px;
-  padding-left: 1%;
   padding-right: 1%;
 }
 
@@ -304,6 +303,10 @@
 }
 
 .FotoPerfilM{
+  display: none;
+}
+
+.AreasMobile{
   display: none;
 }
 
@@ -425,6 +428,11 @@ body{width:100%}
   }
 
   .Areas{
+    display: none;
+  }
+
+  .AreasMobile{
+    color: #e7b157;
     position: inherit;
     text-align: left;
     width: auto;
@@ -434,7 +442,8 @@ body{width:100%}
     margin-bottom: 5%;
   }
 
-  .Areas h5 {
+  .AreasMobile h5 {
+    color: #e7b157;
     position: inherit;
     text-align: left;
     width: auto;

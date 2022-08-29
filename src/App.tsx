@@ -21,8 +21,15 @@ function App() {
 
   const [pub1, setPub1] = useState(false)
   const [wwp, setWwp] = useState(false)
+  const [opened, setOpened] = useState(false)
   const [mensagem, setMensagem] = useState('')
 
+  useEffect(() => {
+    if (scrollPosition > 180 && window.innerWidth > 900 && opened == false) {
+      setWwp(true)
+      setOpened(true)
+    }
+  });
 
   function handlePub1 () {
     setPub1(!pub1)
@@ -40,23 +47,33 @@ function App() {
   
   return (
     <div className="App">
-      <img src={Barra1} className='Barra1'/>
-      <img src={Barra2} className='Barra2'/>
+      
       
       <div className='Header' >
         <div className='FotoPerfil' ></div>
         <img className='Logo' src={Logo} alt ='' />
         <img className='Nome' src={Nome} alt='' />
         <img className='Logo1' src={Logo} alt ='' />
+        <div className='Areas'>
+            <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
+            <li>Direitos de Sucessão</li>
+            <li>Direito de Família</li>
+            <li>Direito Imobiliário</li>
+            <li>Direito do Consumidor</li>
+        </div>
+        <img src={Barra1} className='Barra1'/>
+        <img src={Barra2} className='Barra2'/>
       </div>
       <img className='FotoPerfilM' src='src/assets/LogoGabrielFundoEscuro2.jpg'></img>
-      <div className='Areas'>
+      <div className='AreasMobile'>
             <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
             <li>Direitos de Sucessão</li>
             <li>Direito de Família</li>
             <li>Direito Imobiliário</li>
             <li>Direito do Consumidor</li>
       </div>
+      
+     
       <Carousel showStatus={false}  showThumbs={false} className='Carrousel' autoPlay={true} infiniteLoop={true} interval={5000} stopOnHover={false}>
         <div>
             <img src={img1} className='CarrouselImage'/>
@@ -143,8 +160,8 @@ function App() {
         </p>
       </div>
 
-      <div id={((scrollPosition > 180 && window.innerWidth > 900) || wwp) ? 'chat-box': 'chat-box-closed'}>
-        <div id='chat-top'>Whatsapp <span id='chat-top-right'><svg id='close-box' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill='#fff'/></svg></span><div className='clear'></div></div>
+      <div id={wwp ? 'chat-box': 'chat-box-closed'}>
+        <div id='chat-top'>Whatsapp <span id='chat-top-right'><svg onClick={handleWwp} id='close-box' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z" fill='#fff'/></svg></span><div className='clear'></div></div>
         <div id='chat-msg'> 
                             <p>Olá, tudo bem? </p>
                             <p>Este é o canal de atendimento do escritório de advocacia Cabral Bezerra Advogados Associados.  </p>
