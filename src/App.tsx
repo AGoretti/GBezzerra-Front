@@ -64,15 +64,16 @@ function App() {
         <img src={Barra1} className='Barra1'/>
         <img src={Barra2} className='Barra2'/>
       </div>
-      <img className='FotoPerfilM' src='src/assets/LogoGabrielFundoEscuro2.jpg'></img>
-      <div className='AreasMobile'>
-            <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
-            <li>Direitos de Sucessão</li>
-            <li>Direito de Família</li>
-            <li>Direito Imobiliário</li>
-            <li>Direito do Consumidor</li>
+      <div className='Mobile' >
+        <img className='FotoPerfilM' src='src/assets/LogoGabrielFundoEscuro2.jpg'></img>
+        <div className='AreasMobile'>
+              <h5>Áreas de atuação:</h5>  Direito Civil e seus ramos
+              <li>Direitos de Sucessão</li>
+              <li>Direito de Família</li>
+              <li>Direito Imobiliário</li>
+              <li>Direito do Consumidor</li>
+        </div>
       </div>
-      
      
       <Carousel showStatus={false}  showThumbs={false} className='Carrousel' autoPlay={true} infiniteLoop={true} interval={5000} stopOnHover={false}>
         <div>
