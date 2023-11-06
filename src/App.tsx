@@ -148,7 +148,7 @@ function App() {
         <div className='linhaFooter' />
         <div className='linhaFooter1' />
         <div className='contatos1'>
-          +55 (61) 9.9640-5998. <br />
+          +55 (61) 9.9158-9849 <br />
           escritorio@cabralbezerra.com
         </div>
       </div>
@@ -170,7 +170,7 @@ function App() {
                             <p>Por favor, informe-nos como podemos ajudar-lhe?</p>
         <div id='chat-form'>
         <div className='chat-in'>
-        <input onChange={e => setMensagem(e.target.value)} type='text' id='whats-in' placeholder='Mande sua mensagem...' /></div><a target="_blank" href={'https://api.whatsapp.com/send?phone=5561996405998&text=' + mensagem} id='send-btn'><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"><path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z" fill='rgb(18, 140, 126)' /></svg></a></div>
+        <input onChange={e => setMensagem(e.target.value)} type='text' id='whats-in' placeholder='Mande sua mensagem...' /></div><a target="_blank" href={'https://api.whatsapp.com/send?phone=+5561991589849&text=' + mensagem} id='send-btn'><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"><path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z" fill='rgb(18, 140, 126)' /></svg></a></div>
         </div>
       </div>
       <div id='whats-chat'>
