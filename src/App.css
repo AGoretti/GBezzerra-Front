@@ -498,4 +498,13 @@ body{width:100%}
     margin-left: 0;
   }
 
+  .window-open{
+    left: 10%;
+    width: 80%;
+  }
+
+  .pub{
+    text-align: left;
+  }
+
 }
