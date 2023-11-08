@@ -81,7 +81,8 @@
   z-index: 50;
 }
 
-.card {
+.card1 {
+  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5%;
@@ -89,6 +90,14 @@
   min-height: 150px;
   margin-top: 2%;
   margin-bottom: 2%;
+  background-image: url('./assets/paper.png');
+  background-color: transparent;
+  background-size: 105% 120%;
+  padding-top: 1%;
+}
+
+.card1:hover{
+  cursor: pointer;
 }
 
 .float{
@@ -462,7 +471,7 @@ body{width:100%}
     flex-direction: column;
   }
 
-  .card{
+  .card1{
     margin-top: 5%;
     margin-bottom: 5%;
     width: 90%;

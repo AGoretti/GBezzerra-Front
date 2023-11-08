@@ -112,7 +112,7 @@ function App() {
       </Carousel>
      
       <div className='Cards'>
-        <div className='card'>
+        <div className='card1'>
           <Carrousel variant="dark" indicators={false} >
             <Carrousel.Item>
               <p onClick={handlePub1} className='cardText'>
@@ -131,7 +131,7 @@ function App() {
             </Carrousel.Item>
           </Carrousel>
         </div>
-        <div className='card' >
+        <div className='card1' >
           <Carrousel variant="dark"indicators={false} >
             <Carrousel.Item>
               <p onClick={handleTxt1} className='cardText'>
