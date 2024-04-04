@@ -16,6 +16,11 @@ import Barra1 from './assets/canto inferior sem texto.png'
 import Barra2 from './assets/canto superior.png'
 import logoEmpresa from './assets/LogoGabrielFundoEscuro2.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AliceCarousel, { Link } from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import Paper from './assets/paper.png'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 function App() {
 
@@ -26,6 +31,16 @@ function App() {
   const [wwp, setWwp] = useState(false)
   const [opened, setOpened] = useState(false)
   const [mensagem, setMensagem] = useState('')
+
+  const handleDragStart = (e) => e.preventDefault();
+
+  const items = [
+    <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
+    <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
+    <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
+  ];
+
+const Gallery = () => <AliceCarousel mouseTracking items={items} />;
 
   useEffect(() => {
     if (scrollPosition > 180 && window.innerWidth > 900 && opened == false) {
@@ -112,6 +127,7 @@ function App() {
       </Carousel>
      
       <div className='Cards'>
+      {/*
         <div className='card1'>
           <Carrousel variant="dark" indicators={false} >
             <Carrousel.Item>
@@ -150,6 +166,74 @@ function App() {
             </Carrousel.Item>
       </Carrousel>
         </div>
+        */}
+      <AliceCarousel mouseTracking>
+
+        <Link href="#">
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={img1} />
+          <Card.Body>
+            <Card.Text>
+              Precedente do tribunal do Distrito Federal a respeito da impossibilidade de reter mais de 30% da conta-salário, em caso de empréstimo pessoal
+            </Card.Text>
+            <Button variant="primary" onClick={handlePub1}>Abrir</Button>
+          </Card.Body>
+        </Card>
+        </Link>
+
+        <Link href="#">
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={img1} />
+          <Card.Body>
+            <Card.Text>
+              CNJ lança ferramenta que permite identificar ativos e agilizar execução
+            </Card.Text>
+            <Button variant="primary" onClick={handlePub2}>Abrir</Button>
+          </Card.Body>
+        </Card>
+        </Link>
+
+        <Link href="#">
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={img1} />
+          <Card.Body>
+            <Card.Text>
+              Prescrição também impede cobrança extrajudicial da dívida, diz STJ
+            </Card.Text>
+            <Button variant="primary" onClick={handlePub3}>Abrir</Button>
+          </Card.Body>
+        </Card>
+        </Link>
+
+      </AliceCarousel>
+      <AliceCarousel mouseTracking>
+
+        <Link href="#">
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={img1} />
+          <Card.Body>
+            <Card.Text>
+                Frequentemente, nossos clientes apresentam uma dúvida recorrente relacionada ao funcionamento dos processos judiciais.
+            </Card.Text>
+            <Button variant="primary" onClick={handleTxt1}>Abrir</Button>
+          </Card.Body>
+        </Card>
+        </Link>
+
+        <Link href="#">
+        <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={img1} />
+          <Card.Body>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <Button variant="primary">Abrir</Button>
+          </Card.Body>
+        </Card>
+        </Link>
+
+      </AliceCarousel>
       </div>
       <div className='footer' >
         <div className='Redes'>
